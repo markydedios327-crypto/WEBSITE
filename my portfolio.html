@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#0b0f14;
+            color:white;
+        }
+
+        header{
+            background:#2c3e50;
+            color:white;
+            padding:15px 0;
+            position:sticky;
+            top:0;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            width:90%;
+            margin:auto;
+        }
+
+        nav h1{
+            font-size:28px;
+        }
+
+        nav ul{
+            list-style:none;
+            display:flex;
+        }
+
+        nav ul li{
+            margin-left:20px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#1abc9c;
+        }
+
+        section{
+            min-height:100vh;
+            padding:80px 10%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+
+        /* HOME */
+        #home{
+            background:linear-gradient(to right, #010404, #050505);
+            color:white;
+            text-align:center;
+        }
+
+        #home h2{
+            font-size:50px;
+            margin-bottom:20px;
+        }
+
+        #home p{
+            font-size:20px;
+        }
+
+        /* PROFILE IMAGE */
+        .profile-img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            margin-bottom:20px;
+            border:5px solid white;
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        /* ABOUT */
+        #about{
+            background:#111827;
+            color:white;
+        }
+
+        #about h2,
+        #skills h2,
+        #contact h2{
+            font-size:40px;
+            margin-bottom:20px;
+            color:white;
+        }
+
+        #about p{
+            font-size:18px;
+            line-height:1.8;
+            margin-bottom:20px;
+        }
+
+        /* SKILLS */
+        #skills{
+            background:#0f172a;
+        }
+
+        .skills-box{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+            gap:15px;
+        }
+
+        .skill{
+            background:#1f2937;
+            color:white;
+            padding:15px;
+            text-align:center;
+            border-radius:8px;
+            font-weight:bold;
+            box-shadow:0 2px 5px rgba(0,0,0,0.4);
+        }
+
+        /* CONTACT */
+        #contact{
+            background:#111827;
+            color:white;
+        }
+
+        form{
+            max-width:500px;
+        }
+
+        form input,
+        form textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #333;
+            border-radius:5px;
+            background:#1f2937;
+            color:white;
+        }
+
+        form input::placeholder,
+        form textarea::placeholder{
+            color:#bbb;
+        }
+
+        form button{
+            background:#060b0a;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            cursor:pointer;
+            border-radius:5px;
+            font-size:16px;
+        }
+
+        form button:hover{
+            background:#101010;
+        }
+
+        footer{
+            background:#2c3e50;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>My Portfolio</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section id="home">
+
+        <img src="C:\Users\Admin\Pictures\download.png" alt="My Picture" class="profile-img">
+
+        <h2>Hello, I'm Mark Louie A. de Dios</h2>
+        <p>Web Developer | Student | Designer | Technology Enthusiast</p>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <p>
+            I am a passionate student and aspiring web developer who enjoys building modern and responsive websites.
+            I am deeply interested in technology, especially in web development, software engineering, and UI/UX design.
+        </p>
+
+        <p>
+            I have experience working with HTML, CSS, and JavaScript, and I am currently learning backend development,
+            database management, and modern frameworks to improve my skills in full-stack development.
+        </p>
+
+        <p>
+            My goal is to become a professional software developer who creates efficient, user-friendly, and innovative
+            digital solutions using modern technologies.
+        </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2>Technology & Skills</h2>
+
+        <div class="skills-box">
+            <div class="skill">HTML5</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Responsive Design</div>
+            <div class="skill">UI/UX Basics</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Java (Basic)</div>
+            <div class="skill">MySQL (Basic)</div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <input type="text" placeholder="Enter your name" required>
+
+            <input type="email" placeholder="Enter your email" required>
+
+            <textarea rows="5" placeholder="Enter your message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 My Portfolio | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
